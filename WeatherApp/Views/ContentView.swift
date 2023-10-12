@@ -13,7 +13,16 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            WelcomeView(locationManager: locationManager)
+            
+            if let location = locationManager.location {
+                Text("Current coordinates, \(location.longitude), \(location.latitude)")
+                     } else {
+                    if locationManager.isLoading {
+                        LoadingView()
+                    } else {
+                        WelcomeView(locationManager: locationManager)
+                    }
+                }
         }
      
     }

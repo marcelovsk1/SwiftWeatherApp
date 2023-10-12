@@ -15,13 +15,23 @@ struct WelcomeView: View {
     
     var body: some View {
         ZStack {
+            
+            BlobShape()
+                .frame(width: 400, height: 425)
+                .foregroundStyle(.linearGradient(colors: [.pink, .purple], startPoint: .topLeading, endPoint: .bottomTrailing))
+                .opacity(isAnimating ? 1 : 0) // view should be completely transparent
+                .offset(y: isAnimating ? 0 : -40) // control the view positon
+                .animation(.easeOut(duration: 4), value: isAnimating) // time of the animation
+            
             VStack {
                 VStack(spacing: 20) {
                     Text("Welcome to the iWeather")
                         .bold()
                         .font(.title)
+                        .foregroundColor(.white)
                     Text("Share your present location to provide the weather information for your area")
                         .padding()
+                        .foregroundColor(.white)
                 }
                 .multilineTextAlignment(.center)
                 .padding()
@@ -35,6 +45,9 @@ struct WelcomeView: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .onAppear {
+            isAnimating = true
+        }
     }
     
 }

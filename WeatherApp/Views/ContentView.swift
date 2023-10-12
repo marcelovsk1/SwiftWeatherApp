@@ -11,19 +11,34 @@ struct ContentView: View {
     
     @StateObject var locationManager = LocationManager()
     private var weatherManager = WeatherManager()
-    @State var weather: WeatherResponse?
+    @State var weather: WeatherManager?
     
     
     var body: some View {
         VStack {
             
             if let location = locationManager.location {
-                Text("Current coordinates, \(location.longitude), \(location.latitude)")
-                     } else {
-                    if locationManager.isLoading {
-                        LoadingView()
-                    } else {
-                        WelcomeView(locationManager: locationManager)
+                if let weather = weather {
+                    Text("Current coordinates, \(location.longitude), \(location.latitude)")
+                } else {
+                    LoadingView()
+                        .task {
+                            weatherManager.getWeatherData(for: location) {
+                                result in
+                                switch result {
+                                case .success(let weather):
+                                    self.weather = weather
+                                case .failure(let error):
+                                    print("Error while getting data, \(error)")
+                                }
+                            }
+                        }
+                }
+            } else {
+                if locationManager.isLoading {
+                    LoadingView()
+                } else {
+                    WelcomeView(locationManager: locationManager)
                     }
                 }
         }

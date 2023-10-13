@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @StateObject var locationManager = LocationManager()
     private var weatherManager = WeatherManager()
-    @State var weather: WeatherManager?
+    @State var weather: WeatherManager.WeatherResponse?
     
     
     var body: some View {
@@ -26,10 +26,11 @@ struct ContentView: View {
                             weatherManager.getWeatherData(for: location) {
                                 result in
                                 switch result {
+                                    
                                 case .success(let weather):
                                     self.weather = weather
                                 case .failure(let error):
-                                    print("Error while getting data, \(error)")
+                                    print("Error getting data, \(error)")
                                 }
                             }
                         }

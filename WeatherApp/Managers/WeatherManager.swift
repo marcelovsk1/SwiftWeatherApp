@@ -39,7 +39,6 @@ class WeatherManager {
         case invalidData
     }
     
-    
     struct WeatherResponse: Decodable {
         var weather: [WeatherDetails]
         var main: MainResponse

@@ -19,7 +19,7 @@ struct ContentView: View {
             
             if let location = locationManager.location {
                 if let weather = weather {
-                    Text("Current coordinates, \(location.longitude), \(location.latitude)")
+                    WeatherView(weather: weather)
                 } else {
                     LoadingView()
                         .task {

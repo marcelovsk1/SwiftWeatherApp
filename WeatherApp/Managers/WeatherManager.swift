@@ -8,7 +8,7 @@ import Foundation
 import CoreLocation
 
 class WeatherManager {
-    private let apiKey = "d30f67b6b90d5242d67de92fad9ea30e"
+    private let apiKey = "."
     
     func getWeatherData(for coordinate: CLLocationCoordinate2D, completion: @escaping (Result<WeatherResponse, WeatherError>) -> Void) {
         guard let url = URL(string:

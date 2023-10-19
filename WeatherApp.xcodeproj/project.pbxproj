@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BC3649F2AE14A3D001D6212 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC3649E2AE14A3D001D6212 /* SearchBarView.swift */; };
 		0BC9CD742AD70951009A52B5 /* WeatherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC9CD732AD70951009A52B5 /* WeatherAppApp.swift */; };
 		0BC9CD762AD70951009A52B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC9CD752AD70951009A52B5 /* ContentView.swift */; };
 		0BC9CD782AD70956009A52B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BC9CD772AD70956009A52B5 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BC3649E2AE14A3D001D6212 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		0BC9CD702AD70951009A52B5 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BC9CD732AD70951009A52B5 /* WeatherAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppApp.swift; sourceTree = "<group>"; };
 		0BC9CD752AD70951009A52B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				0BC9CD872AD71275009A52B5 /* WelcomeView.swift */,
 				0BC9CD892AD72411009A52B5 /* LoadingView.swift */,
 				0BC9CD922AD8C37B009A52B5 /* WeatherView.swift */,
+				0BC3649E2AE14A3D001D6212 /* SearchBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				0BC9CD862AD70A09009A52B5 /* LocationManager.swift in Sources */,
 				0BC9CD992AD969ED009A52B5 /* WeatherRow.swift in Sources */,
 				0BC9CD8A2AD72411009A52B5 /* LoadingView.swift in Sources */,
+				0BC3649F2AE14A3D001D6212 /* SearchBarView.swift in Sources */,
 				0BC9CD882AD71275009A52B5 /* WelcomeView.swift in Sources */,
 				0BC9CD932AD8C37B009A52B5 /* WeatherView.swift in Sources */,
 				0BC9CD952AD962D8009A52B5 /* Extensions.swift in Sources */,

@@ -15,8 +15,8 @@ struct WeatherView: View {
         NavigationView {
             ZStack(alignment: .leading) {
                 VStack {
-//                    SearchBarView(weather: $weather)
-//                        .frame(maxWidth: .infinity)
+                    SearchBarView(weather: $weather)
+                        .frame(maxWidth: .infinity)
                     
                     VStack(alignment: .leading, spacing: 5) {
                         Text("\(weather.name), \(weather.sys.country)")

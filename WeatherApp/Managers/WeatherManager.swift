@@ -8,10 +8,12 @@ import Foundation
 import CoreLocation
 
 class WeatherManager {
-    private let apiKey = "d17735e5cec9ef34430f73a92b7fdc37"
+    private let apiKey = "d30f67b6b90d5242d67de92fad9ea30e"
     
     func getWeatherData(for coordinate: CLLocationCoordinate2D, completion: @escaping (Result<WeatherResponse, WeatherError>) -> Void) {
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(coordinate.latitude)&lon=\(coordinate.longitude)&appid=\(apiKey)&units=metric") else {
+        guard let url = URL(string:
+            "https://api.openweathermap.org/data/2.5/weather?lat=\(coordinate.latitude)&lon=\(coordinate.longitude)&appid=\(apiKey)&units=metric")
+        else {
             completion(.failure(WeatherError.invalidURL))
             return
         }

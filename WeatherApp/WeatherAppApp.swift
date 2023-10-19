@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 @main
+
 struct WeatherAppApp: App {
     var body: some Scene {
         WindowGroup {
